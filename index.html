@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--To display the name on the new tab-->
+        <title>Sri Rohita Resume</title>
+        <script src="js/jquery/jQuery.js"></script>
+        <!--To display the image icon on the new tab-->
+        <link rel="icon" href="images/MY_PIC.png" type="image/x-png">
+        <link href="css/style.css" rel="stylesheet">
+        <!--To add additional css and javascript to the resume-->
+        <link href="css/owncss.css" rel="stylesheet">
+        <link href="css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!--Unless key is obtained and passed as a parameter, map is not getting displayed. Hence, it has been obtained and placed-->
+        <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAXYPhTay9GpBLQUgYE64Cb4A780HHsj9U"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <!--For aesthetics, created a surrounding div of gray color-->
+        <div class="main-div">
+            <!--For aesthetics, made the main div as 1000px wide using the class 'container'-->
+            <div id="main" class="container">
+                <!--Implemented bootstrap rows-->
+                <div id="header" class="row center-content clear-fix">
+                    <ul id="topContacts" class="flex-box"></ul>
+                </div>
+                <div style="clear: both;"></div>
+                <div id="workExperience" class="row gray">
+                    <h2>Work Experience</h2>
+                </div>
+                <div id="projects">
+                    <h2>Projects</h2>
+                </div>
+                <div id="education" class="row gray">
+                    <h2>Education</h2>
+                </div>                    
+                <div id="academic-skills-chart" class="row">                        
+                    <h2 class="padding-left-zero">Academics & Skills Charts</h2>
+                    <div class="box">
+                        <div id="container-academics"></div>
+                        <div id="container-skills"></div>                
+                    </div>
+                </div>
+                <div id="mapDiv" class="row">
+                    <h2>Where I've Lived and Worked</h2>
+                </div>
+                <div id="lets-connect" class="row dark-gray">
+                    <h2 class="orange center-text">Let's Connect</h2>
+                    <ul id="footerContacts" class="flex-box">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--To display charts in my online resume-->
+        <script src="js/highcharts/highcharts.js"></script>
+        <script src="js/highcharts/exporting.js"></script>
+        
+        <script src="js/helper.js"></script>
+        <script src="js/resumeBuilder.js"></script>
+        <script>
+            if (document.getElementsByClassName('flex-item').length === 0) {
+                document.getElementById('topContacts').style.display = 'none';
+            }
+            if (document.getElementsByTagName('h1').length === 0) {
+                document.getElementById('header').style.display = 'none';
+            }
+            if (document.getElementsByClassName('work-entry').length === 0) {
+                document.getElementById('workExperience').style.display = 'none';
+            }
+            if (document.getElementsByClassName('project-entry').length === 0) {
+                document.getElementById('projects').style.display = 'none';
+            }
+            if (document.getElementsByClassName('education-entry').length === 0) {
+                document.getElementById('education').style.display = 'none';
+            }
+            if (document.getElementsByClassName('flex-item').length === 0) {
+                document.getElementById('lets-connect').style.display = 'none';
+            }
+            if (document.getElementById('map') === null) {
+                document.getElementById('mapDiv').style.display = 'none';
+            }
+            //For the display of charts based on the availability of data in education
+            if (document.getElementsByClassName('education-entry').length === 0) {
+                document.getElementById('academic-skills-chart').style.display = 'none';
+            }
+        </script>        
+    </body>
+</html>

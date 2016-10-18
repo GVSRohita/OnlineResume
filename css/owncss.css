@@ -1,0 +1,46 @@
+/*My own style to the page*/
+hi {
+    color: orange;
+}
+
+h3 {
+    padding-left: 0;
+}
+
+#academic-skills-chart {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#container-academics {
+    width: 50%;
+    float: left;
+}
+
+#container-skills {
+    width: 50%;
+    float: left;
+}
+
+#mapDiv {
+    width: 100%;
+}
+
+.main-div {
+    width: 100%;
+    background-color: gray;
+}
+
+.container {
+    margin: auto;
+    width: 1000px;
+    background-color: #fff;
+}
+
+.box {
+    border: #23527c solid thin;
+}
+
+.padding-left-zero {
+    padding-left: 0;
+}
